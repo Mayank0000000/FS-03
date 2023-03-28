@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+   gap: 2rem;
+   
+}
+.input {
+    width: 300px;
+    height: 30px;
+}
+.temp {
+    margin-top: 45px;
+    margin-left: 40%;
+}
+.hidden {
+    display: none;
+}
+.radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
