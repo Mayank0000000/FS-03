@@ -34,7 +34,11 @@
         </div>
         <h2>2.b</h2>
         <h3>Event propagation is a mechanism that defines how events propagate or travel through the DOM tree to arrive 
-            at its target and what happens to it afterward <br> Suppose there are nested elements and I want to mofify them differently using click event. 
+            at its target and what happens to it afterwards. First capturing phase takes place where the event is generated
+             in the document root element and travels toward the target element. After that bubbling phase takes place in which then
+             the event travels upwards to the document root element. So, both capturing and bubbling combined is called 
+              event propagation
+            <br> Suppose there are nested elements and I want to mofify them differently using click event. 
             In place of clicking the individual element I can  click the child element and then the 
             click event will travel to its parent elements and modification will be done in just a single click.</h3>
             <h3>
