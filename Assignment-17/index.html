@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ASS 17</title>
+    <!-- <style>
+        hr{
+            height: 3px solid;
+        }
+        #a{
+            color: darkcyan;
+        }
+        #output{
+            color: #00ffb7;
+        }
+        #main{
+            color: cadetblue;
+        }
+        h3{
+            color: darkcyan;
+        }
+        #r{
+            color:rgba(0, 0, 0, 0.568) ;
+        }
+    </style> -->
+  </head>
+  <h1 id="main">1.TO Display Current URL Of The Document and Size Of Windo in pixels</h1>
+  <body>
+    <h2 id="output">Current URL: <span id="currentUrl"></span></h2>
+    <h2 id="output">Window size: <span id="windowSize"></span></h2>
+   
+    <hr><hr>
+
+    <br>
+    <!-- explanation of given 1 b qestion -->
+    <h1 id="a">Location Object Model :</h1>
+    <h2 id="r">The Location object specifies the URL currently being displayed, and allows JavaScript code to load new URLs</h2>
+    <h1 id="a">Different Usages Of Location Object Models: </h1>
+    <h2 id="r">location.assign();//loads new documents  </h2>
+    <h2 id="r">location.relode();//reloades the current document </h2>
+    <h2 id="r">location.replace();/replaces the current document with new one.</h2> 
+    <br>
+    <h1 id="a">History Objects Model:</h1>
+    <h2 id="r">The History object contains information about the URLs that have been previously displayed in the window.</h2>
+    <h1 id="a">Different Usages Of History Object Models: </h1>
+    <h2 id="r">history.back();//for previous page  </h2>
+    <h2 id="r">history.forward();//for next page  </h2>
+    <h2 id="r">history.go(2);//for next 2nd page </h2> 
+    <h2 id="r">history.go(-2);//for previous 2nd page  </h2>
+<hr><hr><hr>
+<br>
+<br>
+<h1  id="main">2.To Display The Width and Height Of The Screen , And Color  Depth Of The Screen:</h1>
+<h2 id="output">Width: <span id="width"></span> pixels</h2>
+<h2 id="output">Height: <span id="height"></span> pixels</h2>
+<h2 id="output">Color depth: <span id="color-depth"></span> bits per pixel</h2>
+
+<hr><hr>
+<br>
+<br>
+<!-- Explanation of given 2b qestion -->
+<h1 id="a">Navigator Object Model:</h1>
+<h2 id="r">The navigator object is a part of the browser object model (BOM) that provides information about the browser environment and capabilities to the web page or script. It represents the browser window and can be used to retrieve information about the browser, such as the browser name, version, and operating system.</h2>
+<h1 id="a">Example:</h1>
+<h2 id="r">Here's an example of how to use the navigator object in JavaScript to detect the user's browser and operating system:</h2>
+<h3>// Check if the user is using Internet Explorer</h3>
+<h3>if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {</h3> 
+<h3> alert('You are using Internet Explorer.');</h3> 
+<h3>   }</h3>
+<h3>  // Check if the user is using Mac OS X </h3>  
+<h3>if (navigator.platform.indexOf('Mac') !== -1) { </h3>
+    <h3>  alert('You are using Mac OS X.');   </h3> 
+    <h3>  } </h3> 
+    <hr><hr><hr>
+    <script>
+      // Get the current URL and display it
+      var currentUrl = window.location.href;
+      var currentUrlSpan = document.getElementById("currentUrl");
+      currentUrlSpan.innerHTML = currentUrl;
+
+      // Get the window size and display it
+      var windowWidth = window.innerWidth;
+      var windowHeight = window.innerHeight;
+      var windowSizeSpan = document.getElementById("windowSize");
+      windowSizeSpan.innerHTML = windowWidth + " x " + windowHeight + " pixels";
+
+      // Update the window size whenever the window is resized
+      window.addEventListener("resize", function() {
+        windowWidth = window.innerWidth;
+        windowHeight = window.innerHeight;
+        windowSizeSpan.innerHTML = windowWidth + " x " + windowHeight + " pixels";
+      });
+
+
+       // Get screen information
+       var screenWidth = screen.width;
+      var screenHeight = screen.height;
+      var colorDepth = screen.colorDepth;
+
+      // Update HTML with screen information
+      document.getElementById("width").innerHTML = screenWidth;
+      document.getElementById("height").innerHTML = screenHeight;
+      document.getElementById("color-depth").innerHTML = colorDepth;
+
+    </script>
+  </body>
+</html>
